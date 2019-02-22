@@ -88,29 +88,39 @@ const ContainerRightSpan = styled.span`
 
 
 
-const TopBar = () => {
-  return (
-    <TopBarStyle>
-      <Container>
+class TopBar extends React.Component{
 
+  handelLogin = e => {
+    e.preventDefault();
+    localStorage.clear();
+    window.location.reload();
+  }
 
-        <ContainerLeft>
-          <ContainerLeftSpan>TOPICS</ContainerLeftSpan><ContainerLeftSpan>SEARCH</ContainerLeftSpan>
-        </ContainerLeft>
-
-        <ContainerCenter>
-          <ContainerCenterSpan>GENERAL</ContainerCenterSpan><ContainerCenterSpan>BROWNBAG</ContainerCenterSpan><ContainerCenterSpan>RANDOM</ContainerCenterSpan><ContainerCenterSpan>MUSIC</ContainerCenterSpan><ContainerCenterLastSpan>ANNOUNCEMENTS</ContainerCenterLastSpan>
-        </ContainerCenter>
-
-
-        <ContainerRight>
-          <ContainerRightSpan>LOG IN</ContainerRightSpan>
-        </ContainerRight>
-
-
-      </Container>
-    </TopBarStyle>
-  )
+  render(){
+    return (
+      <TopBarStyle>
+        <Container>
+  
+  
+          <ContainerLeft>
+            <ContainerLeftSpan>TOPICS</ContainerLeftSpan><ContainerLeftSpan>SEARCH</ContainerLeftSpan>
+          </ContainerLeft>
+  
+          <ContainerCenter>
+            <ContainerCenterSpan>GENERAL</ContainerCenterSpan><ContainerCenterSpan>BROWNBAG</ContainerCenterSpan><ContainerCenterSpan>RANDOM</ContainerCenterSpan><ContainerCenterSpan>MUSIC</ContainerCenterSpan><ContainerCenterLastSpan>ANNOUNCEMENTS</ContainerCenterLastSpan>
+          </ContainerCenter>
+  
+  
+          <ContainerRight>
+            <ContainerRightSpan onClick={this.handelLogin}>LOG IN</ContainerRightSpan>
+          </ContainerRight>
+  
+  
+        </Container>
+      </TopBarStyle>
+    )
+  }
+  
 }
  
 export default TopBar;
