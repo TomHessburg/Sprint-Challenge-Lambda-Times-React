@@ -29,9 +29,24 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+        Prop Types are used to validate the type (i.e. string, function etc) of props being passed in. their formatted in an object, and are very useful for both debugging, and making sure that users are accidentally sending in the wrong type of information.
+
+
 - [ ] Describe a life-cycle event in React?
+
+        react is born (mounting), lives (updating), and dies (unmounting). We can hook in at any point in that process an check out what happens. for instance, we can use componentDidMount() to hook in right after the render method runs. This method could be used to fetch data from an API, and load it once the main part of the application loads.
+
+
 - [ ] Explain the details of a Higher Order Component?
+
+        A higher order component is essentially a super charger for your somponents. similar to a callback function, it takes in another component(or multiple components) as an argument. Its generally used for two reasons, which are 1. conditional rendering, or 2. to give similar properties to different components.
+
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+        One is simply CSS/a preprocessor. This is what were all used to and pretty straight forward. Downside being how bloated everything gets with scale You could also use a preprocessor, which is the same cost/benefit as css. Its also pretty common to see inline styles in React, which is nice for neatness, but bad for somone coming back and trying to figure out what going on if they decided to use a style sheet later on. Lastly, we have styled components. These kind of take the goot parts of inline styles and straight CSS and add them togeth. It can reduce bloat, and become easy to reason about when you have a "Button" component to reference to, plus is essentially just writing straight up actual css without any funny business.
+
 
 ## Project Setup
 
